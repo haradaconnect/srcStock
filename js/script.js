@@ -87,6 +87,12 @@ $(document).ready(function(afterRead){
     }
     }
   });
+  $(window).on('resize', function() {
+    if (device==='pc') {
+        $openBtn.css({'right': 'auto', 'left': '100%'});
+        $nav.removeClass('righty');
+    }
+  });
   // Local strage
   if (device!=='pc' && localStorage.getItem('righty')) {
     if (JSON.parse(localStorage.getItem('righty'))) {
