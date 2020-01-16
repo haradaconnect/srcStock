@@ -1,5 +1,4 @@
-
-$(document).ready(function(){
+$(document).ready(function(afterRead){
 /*====================================
   Initialization
 ====================================*/
@@ -21,7 +20,6 @@ $(document).ready(function(){
     } else {
       device = 'pc';
     }
-  console.log(device);
     return device;
   }
 /*=== コード整形 ===*/
@@ -83,7 +81,6 @@ $(document).ready(function(){
   function setLimitScrl() {
     var scrTop = $(this).scrollTop();
     var scrBot = scrTop + windowH;
-    console.log(scrTop);
     if ((device==='pc'&&scrTop<traceThrY) || ((device==='sp'||device==='tab')&&scrBot>traceThrY)) {
       $traceElm.addClass('limitscrl');
     } else {
