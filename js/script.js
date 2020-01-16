@@ -50,11 +50,9 @@ $(document).ready(function(afterRead){
       if ($(val).hasClass(open)) {
         $('body').removeClass(open);
         $(val).removeClass(open);
-        document.removeEventListener('touchmove', handleTouchMove, { passive: false });
       } else {
         $('body').addClass(open);
         $(val).addClass(open);
-        document.addEventListener('touchmove', handleTouchMove, { passive: false });
       }
     });
   });
@@ -101,7 +99,6 @@ $(document).ready(function(afterRead){
     $.each(target,function(index,val){
       $('body').removeClass(open);
       $(val).removeClass(open);
-      document.removeEventListener('touchmove', handleTouchMove, { passive: false });
     });
   });
 // 追従
@@ -235,10 +232,6 @@ function setBtnEvent() {
       document.execCommand('copy');
     });
   });
-}
-/*=== スクロール停止 ===*/
-function handleTouchMove(event) {
-    event.preventDefault();
 }
 /*====================================
   Memo

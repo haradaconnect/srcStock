@@ -54,6 +54,7 @@ footer {
 /*== Nav ===*/
 nav {
   width: 200px;
+  height: 90vh;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   position: fixed;
