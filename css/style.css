@@ -312,14 +312,15 @@ button {
   }
   /* ボタン位置 */
   nav .btnSide {
-    width: 30px;
-    height: 98px;
-    background-color: #bbb;
-    border-radius: 0 5px 5px 0;
+    width: 50px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #333;
+    /* border-radius: 5px 5px 0 0; */
     display: block;
     position: absolute;
-    bottom: 20px;
-    left: calc(100% + 50px);
+    bottom: 119px;
+    left: 100%;
     cursor: pointer;
     visibility: visible;
   }
@@ -328,8 +329,8 @@ button {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 5px 0 5px 6px;
-    border-color: transparent transparent transparent #fff;
+    border-width: 10px 0 10px 12px;
+    border-color: transparent transparent transparent #333;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -346,13 +347,13 @@ button {
     right: 100%;
   }
   nav.righty .btnSide {
-    border-radius: 5px 0 0 5px;
+    /* border-radius: 5px 0 0 5px; */
     left: auto;
-    right: calc(100% + 50px);
+    right: 100%;
   }
   nav.righty .btnSide::after {
-    border-width: 5px 6px 5px 0;
-    border-color: transparent #fff transparent transparent;
+    border-width: 10px 12px 10px 0;
+    border-color: transparent #333 transparent transparent;
   }
   /* 開時 */
   body.navOpen {
