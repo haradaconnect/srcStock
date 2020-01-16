@@ -25,44 +25,27 @@
 ========================-->
   <header>
     <div class="wrap">
-        ソースコード一覧↓
-<!--=== Nav ===-->
-      <nav>
-        <div class="openBtn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="btnSide"></div>
-        <div class="jumpField">
-        </div>
-      </nav>
+        ソースコード整形
     </div>
   </header>
 <!--=======================
   Main
 ========================-->
   <main>
-    <section id="headline">
-      <h1>コピペで使えるようにしたい</h1>
-      <div class="aWrapper">
-          <a href="./replace.html" target="_blank" class="">整形ツール</a>
-      </div>
-    </section>
-    <section id="srcGroupField">
+    <section id="">
       <div class="wrap">
+        <div class="uiWrapper">
+            <label for="src">
+                <textarea name="src" id="src" rows="10"></textarea>
+            </label>
+        </div>
+        <div class="uiWrapper">
+            <label for="formedSrc">
+                <textarea name="formedSrc" id="formedSrc" rows="10" disabled="disabled"></textarea>
+            </label>
+            <div class="btnWrapper"><button id="copy">COPY</button></div>
+         </div>
       </div>
-
-      
-<div class="uiWrapper radio">
-  <span></span>
-  <input type="radio" name="radio" value="qid" id="radio00" checked="checked">
-  <label for="radio00" class="radioLabel">選択01</label>
-  <input type="radio" name="radio" value="qid" id="radio01">
-  <label for="radio01" class="radioLabel">選択02</label>
-</div>
-
-
     </section>
   </main>
 <!--=======================
@@ -77,9 +60,8 @@
   Scripts
 ========================-->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
   <script src="./js/source.js"></script>
   <script src="./js/script.js"></script>
-  <script src="./js/test.js"></script>
+  <script src="./js/replace.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-$(document).ready(function(afterRead){
+$(document).ready(function(){
 /*====================================
   Initialization
 ====================================*/
@@ -89,8 +89,15 @@ $(document).ready(function(afterRead){
   });
   $(window).on('resize', function() {
     if (device==='pc') {
-        $openBtn.css({'right': 'auto', 'left': '100%'});
-        $nav.removeClass('righty');
+      $openBtn.css({'right': 'auto', 'left': '100%'});
+      $nav.removeClass('righty');
+    } else {
+      if (device!=='pc' && localStorage.getItem('righty')) {
+        if (JSON.parse(localStorage.getItem('righty'))) {
+          $openBtn.css({'left': 'auto', 'right': '100%'});
+          $nav.addClass('righty');
+        }
+      }
     }
   });
   // Local strage
