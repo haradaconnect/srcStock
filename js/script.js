@@ -71,8 +71,9 @@ $(document).ready(function(afterRead){
       $btnSide.css({'opacity': '0'});
       $openBtn.animate({'right': navW+'px'}, 500, 'swing', function(){
         $openBtn.css({'right': 'auto', 'left': '100%'});
-        $btnSide.css({'opacity': '1'});
         $nav.removeClass('righty');
+        localStorage.setItem('righty', false);
+        $btnSide.css({'opacity': '1'});
         flagSideChage = false;
       });
     } else {
@@ -80,13 +81,21 @@ $(document).ready(function(afterRead){
       $btnSide.css({'opacity': '0'});
       $openBtn.animate({'left': navW+'px'}, 500, 'swing', function(){
         $openBtn.css({'left': 'auto', 'right': '100%'});
-        $btnSide.css({'opacity': '1'});
         $nav.addClass('righty');
+        localStorage.setItem('righty', true);
+        $btnSide.css({'opacity': '1'});
         flagSideChage = false;
       });
     }
     }
   });
+  // Local strage
+  if (device!=='pc' && localStorage.getItem('righty')) {
+    if (JSON.parse(localStorage.getItem('righty'))) {
+      $openBtn.css({'left': 'auto', 'right': '100%'});
+      $nav.addClass('righty');
+    }
+  }
   // 移動したら閉じる
   $nav.find('a').on('click', function() {
     $.each(target,function(index,val){

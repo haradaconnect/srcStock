@@ -288,9 +288,10 @@ button {
   }
   nav .openBtn {
     width: 50px;
+    height: 100px;
     background-color: #fff;
     top: auto;
-    bottom: -1px;
+    bottom: 20px;
   }
   nav .openBtn span {
     background-color: #333;
@@ -311,12 +312,12 @@ button {
   /* ボタン位置 */
   nav .btnSide {
     width: 30px;
-    height: 48px;
+    height: 98px;
     background-color: #bbb;
     border-radius: 0 5px 5px 0;
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: calc(100% + 50px);
     cursor: pointer;
     visibility: visible;
