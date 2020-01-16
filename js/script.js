@@ -32,7 +32,7 @@ $(document).ready(function(afterRead){
   setBtn(setBtnEvent);
 /*=== Smooth scroll ===*/
   $('a[href^="#"]').on('click', function(){
-    var margin = 60;
+    var margin = (device==='pc') ? 60 : 10;
     var href = $(this).attr('href');
     var target = $((href=='#' || href=='') ? 'html' : href);
     var posY = target.offset().top - margin;
@@ -58,6 +58,36 @@ $(document).ready(function(afterRead){
       }
     });
   });
+  // ボタン位置
+  var $btnSide = $('.btnSide');
+  var flagSideChage = false;
+  $btnSide.on('click', function(){
+    if (!flagSideChage) {
+      flagSideChage = true;
+    var navW = $nav.outerWidth();
+    var openBtnW = $openBtn.outerWidth();
+    if ($nav.hasClass('righty')) {
+      navW += windowW - openBtnW;
+      $btnSide.css({'opacity': '0'});
+      $openBtn.animate({'right': navW+'px'}, 500, 'swing', function(){
+        $openBtn.css({'right': 'auto', 'left': '100%'});
+        $btnSide.css({'opacity': '1'});
+        $nav.removeClass('righty');
+        flagSideChage = false;
+      });
+    } else {
+      navW += windowW - openBtnW;
+      $btnSide.css({'opacity': '0'});
+      $openBtn.animate({'left': navW+'px'}, 500, 'swing', function(){
+        $openBtn.css({'left': 'auto', 'right': '100%'});
+        $btnSide.css({'opacity': '1'});
+        $nav.addClass('righty');
+        flagSideChage = false;
+      });
+    }
+    }
+  });
+  // 移動したら閉じる
   $nav.find('a').on('click', function() {
     $.each(target,function(index,val){
       $('body').removeClass(open);

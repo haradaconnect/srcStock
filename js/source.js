@@ -19,6 +19,21 @@ const srcObj = [
         })\n\
       ',},
     ],},
+    { head:'select', src:[
+      { type:'html', script:'\n\
+        <div class="uiWrapper select">\n\
+            <div class="selectWrapper">\n\
+                <select name="">\n\
+                </select>\n\
+            </div>\n\
+        </div>\n\
+      ',},
+      { type:'js', script:'\n\
+        $(\'\').on(\'change\', function() {\n\
+          var val = $(this).children(\'option:selected\').val()\n\
+        });\n\
+      ',},
+    ],},
   ]},
 ];
 
