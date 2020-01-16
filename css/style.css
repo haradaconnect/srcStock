@@ -54,7 +54,7 @@ footer {
 /*== Nav ===*/
 nav {
   width: 200px;
-  height: 90vh;
+  height: 80vh;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -63,12 +63,12 @@ nav {
   right: 100%;
   transition: transform 0.3s ease-in-out;
   transform: translateX(0);
-  z-index: 100;
+  z-index: 1000;
   visibility: hidden;
 }
 nav .jumpField {
   width: 100%;
-  max-height: 90vh;
+  max-height: 100%;
   overflow-y: auto;
   padding: 20px;
 }
@@ -355,6 +355,9 @@ button {
     border-color: transparent #fff transparent transparent;
   }
   /* 開時 */
+  body.navOpen {
+    overflow: hidden;
+  }
   nav.righty.navOpen {
     transform: translateX(-200px);
   }
