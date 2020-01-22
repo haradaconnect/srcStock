@@ -86,6 +86,8 @@ nav .srcNav:not(:first-of-type) {
 }
 nav .aWrapper a {
   display: block;
+  text-align: left;
+  padding-left: 10px;
 }
 nav .aWrapper:hover,
 nav .aWrapper:active {
