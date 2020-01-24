@@ -32,7 +32,7 @@ $(document).ready(function(){
   setBtn(setBtnEvent);
 /*=== Smooth scroll ===*/
   $('a[href^="#"]').on('click', function(){
-    var margin = (device==='pc') ? 60 : 10;
+    var margin = (device==='pc') ? 20 : 10;
     var href = $(this).attr('href');
     var target = $((href=='#' || href=='') ? 'html' : href);
     var posY = target.offset().top - margin;

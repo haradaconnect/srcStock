@@ -70,7 +70,7 @@ nav .jumpField {
   width: 100%;
   max-height: 100%;
   overflow-y: auto;
-  padding: 20px;
+  padding: 20px 10px;
 }
 nav .gNameNav {
   font-weight: bold;
@@ -81,13 +81,17 @@ nav .gNameNav {
 nav .gNameNav:not(:first-of-type) {
   margin-top: 20px;
 }
+nav .srcNav {
+  padding-left: 10px;
+  margin-top: 10px;
+}
 nav .srcNav:not(:first-of-type) {
   margin-top: 10px;
 }
 nav .aWrapper a {
   display: block;
   text-align: left;
-  padding-left: 10px;
+  overflow-wrap: break-word;
 }
 nav .aWrapper:hover,
 nav .aWrapper:active {
