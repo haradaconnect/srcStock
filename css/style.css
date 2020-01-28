@@ -99,7 +99,7 @@ nav .aWrapper:active {
 }
 /* 開閉ボタン */
 nav .openBtn {
-  width: 200px;
+  width: 100px;
   height: 50px;
   border: 1px solid #333;
   background-color: rgb(90, 88, 251);

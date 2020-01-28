@@ -2,8 +2,8 @@ const srcObj = [
   { gName:'UI系', item:[
     { head:'a', src:[
       { type:'html', script:'\n\
-        <div class="uiWrapper">\n\
-          <input type="number" name="num" value="0" min="0" max="100">\n\
+        <div class="aWrapper">\n\
+          <a href="" class="linkBtn">リンク</a>\n\
         </div>\n\
       ',},
     ],},
