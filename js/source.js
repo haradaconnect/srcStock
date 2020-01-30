@@ -123,5 +123,18 @@ const srcObj = [
         $inputDate.val(\'val\');\n\
       ',},
     ],},
+    { head:'input[type="file"]', src:[
+      { type:'html', script:'\n\
+        <div class="uiWrapper">\n\
+          <label for="file" class="openLabel">\n\
+            <span>開く</span>\n\
+            <input type="file" name="files[]" accept="" multiple="multiple" id="file">\n\
+          </label>\n\
+        </div>\n\
+      ',},
+      { type:'js', script:'\n\
+        $inputFile = $(\'input[type="file"]\');\n\
+      ',},
+    ],},
   ]},
 ];
